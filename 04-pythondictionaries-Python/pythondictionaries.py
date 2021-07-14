@@ -10,6 +10,7 @@ Then, you should print out the values specified
 by looking them up in the structure.
 
 Cities to add:
+city country  continent
 Bangalore (India, Asia)
 Atlanta (USA, North America)
 Cairo (Egypt, Africa)
@@ -33,11 +34,23 @@ Asian City - Country"""
 
 def sortUSA():
     '''Return all the cities in the USA in alphabetical order'''
-    pass
+    
+    for continent,country in locations.items():
+        for value in country:
+            if value == 'USA':
+                f = country[value]
+    return sorted(f)            
+
+        
 
 def alphaAsia():
     '''Return all the cities in Asia continent in alphabetical order'''
-    pass
+    all_cities = []
+    for country, cities in locations['Asia'].items():
+        asia_cities = cities[0]+" - "+country
+        all_cities.append(asia_cities)
+    return sorted(all_cities)    
+
 
 # Note: Check for test cases to understand the output format.
-locations = {'North America': {'USA': ['Mountain View']}}
+locations = {'North America': {'USA': ['Mountain View','Atlanta']},'Asia':{'India':['Bangalore'],'China':["Shanghai"]},'Africa':{'Egypt':["Cairo"]}}
