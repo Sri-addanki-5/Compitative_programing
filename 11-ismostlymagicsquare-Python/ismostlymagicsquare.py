@@ -15,4 +15,34 @@
 
 def ismostlymagicsquare(a):
 	# Your code goes here
-	pass
+# 	n = len(a)
+# 	# if (n == 0) and (n == 1):
+# 	# 	return True
+# 	value1 = 0
+# 	value2 = 0
+# 	for i in range(n):
+# 		value1 += a[i][i]
+# 		value2 += a[i][n-i-1]
+
+# 	# print(value1)
+# 	print(value2)
+# ismostlymagicsquare([ [ 1,2,3,4],[ 2,1,4,5]])	
+	n = len(a)
+	if (n==1):
+		return True
+
+
+	value1 = 0
+	value2 = 0
+	for i in range(n):
+		value1 += a[i][i]
+		value2 += a[i][n-i-1]
+	sum_value1 = 0
+	sum_value2 = 0
+	for i in range(n):
+		for j in range(n):
+			sum_value1+=a[i][j]
+			sum_value2+=a[j][i]
+		v = (value1 == value2 == sum_value1 == sum_value2)	
+		return v	
+
