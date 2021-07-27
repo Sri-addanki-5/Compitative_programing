@@ -6,7 +6,6 @@
 
 
 import math
-
 def isPowerful(n):
     while (n % 2 == 0):
         a = 0
@@ -25,10 +24,9 @@ def isPowerful(n):
     return (n == 1)
 
 def nthpowerfulnumber(n):
-    # Your code goes here
     x = 0
     y = 0
-    while (x <= abs(n)):
+    while (x <= n):
         y += 1
         if(isPowerful(y)):
            x += 1
