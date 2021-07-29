@@ -10,5 +10,14 @@
 
 
 def fun_getaverage(s): 
-	return 0.0
+    value=0
+    base=0
+    for i in s.split(","):
+        if i.isnumeric():
+            value +=float(i)
+            base+=1
+ 
+    if base==0:
+        return 0.0
+    return value/base
 
