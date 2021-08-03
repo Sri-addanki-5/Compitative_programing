@@ -11,9 +11,3 @@ def fun_recursions_alternatingsum(l):
         result= l[0] - fun_recursions_alternatingsum(l[1:])
         return result
  
-def readList():
-    a=[]
-    l=int(input())
-    for i in range(l):
-        a.append(int(input()))
-    return a
