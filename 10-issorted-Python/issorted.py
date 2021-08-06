@@ -5,8 +5,8 @@
 # learn soon, it runs in O(n) time, where n=len(a)), and so in particular you may not sort 
 # the list.
 
-def issorted(a):
-	if(a == sorted(a)) or (a == sorted(a,reverse=True)):
+def issorted(s):
+	if (s == sorted(s)) or (s == sorted(s,reverse=True)):
 		return True
 	else:
-		return False
+		return False	
